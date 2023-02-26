@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Share Modal | Nishitbaria</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <div class="wrapper">
+      <div class="card-wrapper">
+        <div>
+          <img src="./assets/profile-image.webp" alt="user" />
+        </div>
+        <div
+          class="user-name text-4xl font-semibold text-gray-900 dark:text-white"
+        >
+          <h2>
+            Nishit Bariya
+            <i class="fa-solid fa-badge-check"></i>
+          </h2>
+        </div>
+        <div
+          class="designation text-lg font-medium text-gray-900 dark:text-white"
+        >
+          <h3>Founder, TechNodes</h3>
+        </div>
+        <div class="bottom-group">
+          <button
+            onclick="openModal()"
+            class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            <i class="fa-solid fa-share"></i>
+            <div>share my profile</div>
+          </button>
+
+          <button
+            class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Follow me
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Component -->
+    <div class="modal">
+      <div class="modal-header">
+        <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">
+          Share My Profile
+        </h1>
+        <div>
+          <i onclick="closeModal()" class="fa-solid fa-xmark close"></i>
+        </div>
+      </div>
+
+      <div>
+        <h3>Share this via</h3>
+
+        <div class="icon-container">
+          <a href="https://github.com/Nishitbaria" class="icon" id="facebook">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://twitter.com/Nishitbaria1" class="icon" id="twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/coder_nishitbaria_offcial_/"
+            class="icon"
+            id="instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nishitbaria/"
+            class="icon"
+            id="whatsapp"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="#" class="icon" id="telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" onclick="closeModal()"></div>
+
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
